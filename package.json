@@ -1,0 +1,18 @@
+{
+  "name": "wp-error",
+  "version": "1.0.0",
+  "description": "Common logic to process WordPress.com API responses into JS Error objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nathan Rajlich <nathan@automattic.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Automattic/wp-error.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "uppercamelcase": "^1.1.0"
+  }
+}
