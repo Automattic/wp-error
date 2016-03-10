@@ -23,6 +23,7 @@ assert.equal(err.message, '404 status code');
 err = new WPError({ foo: 'bar' }, 403, { error: 'my_error' });
 assert.equal(err.foo, 'bar');
 assert.equal(err.name, 'MyError');
+assert.equal(err.error, 'my_error');
 assert.equal(err.message, '403 status code');
 
 
@@ -37,6 +38,6 @@ err = new WPError({
   error: 'access_denied',
   error_description: 'You need to log in to WordPress.com'
 });
-console.log(err);
 assert.equal(err.name, 'AccessDeniedError');
+assert.equal(err.error, 'access_denied');
 assert.equal(err.message, 'You need to log in to WordPress.com');
