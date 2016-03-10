@@ -4,7 +4,7 @@
   "description": "Common logic to process WordPress.com API responses into JS Error objects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "author": "Nathan Rajlich <nathan@automattic.com>",
   "repository": {
