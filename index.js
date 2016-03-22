@@ -23,29 +23,29 @@ function process ( self, data ) {
 
   } else {
     // assume it's a plain 'ol Object with some props to copy over
-    if (data.status_code) {
+    if ( data.status_code ) {
       setStatusCode( self, data.status_code );
     }
 
-    if (data.error) {
-      self.name = toName(data.error);
+    if ( data.error ) {
+      self.name = toName( data.error );
     }
 
-    if (data.error_description) {
+    if ( data.error_description ) {
       self.message = data.error_description;
     }
 
     var errors = data.errors;
-    if (errors) {
+    if ( errors ) {
       var first = errors.length ? errors[0] : errors;
       process( self, first );
     }
 
-    for (var i in data) {
+    for ( var i in data ) {
       self[i] = data[i];
     }
 
-    if (self.status && (data.method || data.path)) {
+    if ( self.status && ( data.method || data.path ) ) {
       setStatusCodeMessage( self );
     }
   }
