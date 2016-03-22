@@ -19,7 +19,6 @@ function WPError () {
 
 function process ( self, data ) {
   if (typeof data === 'number') {
-    // just a status code then 1  q
     setStatusCode( self, data );
 
   } else {
