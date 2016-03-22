@@ -44,3 +44,18 @@ err = new WPError({
 assert.equal(err.name, 'AccessDeniedError');
 assert.equal(err.error, 'access_denied');
 assert.equal(err.message, 'You need to log in to WordPress.com');
+
+
+// the Batch API endpoint returns errors that looks like this
+err = new WPError({
+  status_code: 404,
+  errors: {
+    error: 'no_such_item',
+    message: 'No item found in that feed with that ID'
+  }
+});
+assert.equal(err.name, 'NoSuchItemError');
+assert.equal(err.error, 'no_such_item');
+assert.equal(err.message, 'No item found in that feed with that ID');
+assert.equal(err.statusCode, 404);
+assert.equal(err.status_code, 404);
