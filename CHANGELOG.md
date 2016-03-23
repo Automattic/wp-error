@@ -1,3 +1,9 @@
+## 2016-03-23, Version 1.2.0
+
+* [[`d099c14cda`](https://github.com/Automattic/wp-error/commit/d099c14cda)] - add quick support for errors from the Batch API (Nathan Rajlich)
+* [[`76e060982d`](https://github.com/Automattic/wp-error/commit/76e060982d)] - **test**: test for `statusCode` (Nathan Rajlich)
+* [[`4499a0a3a6`](https://github.com/Automattic/wp-error/commit/4499a0a3a6)] - **test**: add another test case related to Batch API (Nathan Rajlich)
+
 ## 2016-03-09, Version 1.1.0
 
 * [[`d6ba833921`](https://github.com/Automattic/wp-error/commit/d6ba833921)] - **test**: a couple more `assert()`s (Nathan Rajlich)
