@@ -59,3 +59,12 @@ assert.equal(err.error, 'no_such_item');
 assert.equal(err.message, 'No item found in that feed with that ID');
 assert.equal(err.statusCode, 404);
 assert.equal(err.status_code, 404);
+
+
+// this is how the wpcom.js `.batch()` API would re-create an error object
+// from the Batch API response for an individual failed endpoint
+err = new WPError({ path: '/me', method: 'GET' }, { status_code: 404 });
+assert.equal(err.name, 'NotFoundError');
+assert.equal(err.message, '404 status code for "GET /me"');
+assert.equal(err.statusCode, 404);
+assert.equal(err.status_code, 404);
