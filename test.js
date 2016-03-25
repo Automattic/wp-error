@@ -68,3 +68,11 @@ assert.equal(err.name, 'NotFoundError');
 assert.equal(err.message, '404 status code for "GET /me"');
 assert.equal(err.statusCode, 404);
 assert.equal(err.status_code, 404);
+
+
+// from the `is-available` endpoint
+err = new WPError({"error":"taken","message":"Choose a different email address. This one is not available.","status":"error"});
+assert.equal(err.name, 'TakenError');
+assert.equal(err.message, 'Choose a different email address. This one is not available.');
+assert.equal(err.error, 'taken');
+assert.equal(err.status, 'error');
