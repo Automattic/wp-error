@@ -1,6 +1,6 @@
 {
   "name": "wp-error",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Common logic to process WordPress.com API responses into JS Error objects",
   "main": "index.js",
   "scripts": {
