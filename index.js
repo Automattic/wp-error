@@ -18,6 +18,10 @@ function WPError () {
 }
 
 function process ( self, data ) {
+  if ( ! data ) { 
+    return;
+  }
+  
   if (typeof data === 'number') {
     setStatusCode( self, data );
 
