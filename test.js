@@ -76,3 +76,10 @@ assert.equal(err.name, 'TakenError');
 assert.equal(err.message, 'Choose a different email address. This one is not available.');
 assert.equal(err.error, 'taken');
 assert.equal(err.status, 'error');
+
+// does not throw exception on empty input
+assert.doesNotThrow(function(){
+	new WPError(null);
+	new WPError(undefined);
+	new WPError({"name":"value"},null,undefined);
+});
